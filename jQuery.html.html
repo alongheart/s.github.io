@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<div id="a"></div>
+		<script type="text/javascript">
+//			 $("#btn").bind("mouseover",function(){
+//			 	$("div").css("display","block")
+//			 })
+//			 $("#btn").bind("mouseout",function(){
+//			 	$("div").css("display","none")
+//			 })
+//			$("#btn").hover(function(){
+//				$("div").css("display","block")
+//			},function(){
+//				$("div").css("display","none")
+//			})
+            $("div").click(function(e){
+            	alert(111)
+            	e.stopPropagation()
+            })
+            $("#btn").click(function(e){
+            	alert(222)
+            	e.stopPropagation()
+            })
+		</script>
+	</body>
+</html>
